@@ -3,9 +3,11 @@ package cse360assignment02;
 public class AddingMachine 
 {
 	private int total;
+	private String math = "";
+	private int itotal = 0;
 	  
 	  public AddingMachine () {
-	    total = 0;  // not needed - included for clarity
+	    //total = 0;  // not needed - included for clarity
 	  }
 	  
 	  public int getTotal () {
@@ -13,15 +15,20 @@ public class AddingMachine
 	  }
 	  
 	  public void add (int value) {
+		  total += value;
+		  math += " + " + value ;
 	  }
 
 	  public void subtract (int value) {
+		  total -= value;
+		  math += " - " + value ;
 	  }
 
 	  public String toString () {
-	    return "";
+	    return itotal + math;
 	  }
 
 	  public void clear() {
+		  total = 0;
 	  }
 }
